@@ -1,0 +1,110 @@
+<?php
+$title                   = NULL;
+$teaser                  = NULL;
+$button                  = NULL;
+$link                    = NULL;
+$target                  = NULL;
+$color_custom            = NULL;
+$color_title             = NULL;
+$color_teaser            = NULL;
+$color_button_text       = NULL;
+$color_button_text_hover = NULL;
+$color_button_bg         = NULL;
+$color_button_bg_hover   = NULL;
+
+$title                   = $atts['title'];
+$teaser                  = $atts['teaser'];
+$button                  = $atts['button'];
+$link                    = $atts['link'];
+$target                  = $atts['target'];
+$color_custom            = $atts['color_custom'];
+$color_title             = $atts['color_title'];
+$color_teaser            = $atts['color_teaser'];
+$color_button_text       = $atts['color_button_text'];
+$color_button_text_hover = $atts['color_button_text_hover'];
+$color_button_bg         = $atts['color_button_bg'];
+$color_button_bg_hover   = $atts['color_button_bg_hover'];
+
+$output_link = NULL;
+
+if ( ! empty( $title ) ) {
+	$title = '<h3>' . $title . '</h3>';
+}
+if ( ! empty( $teaser ) ) {
+	$teaser = wpautop( $teaser );
+}
+if ( empty( $button ) ) {
+	$button = 'Read More';
+}
+if ( $target == 'new' ) {
+	$target = ' target="_blank"';
+}
+if ( ! empty( $link) ) {
+	$output_link .= '<div class="action-link">';
+	$output_link .= '<a class="themebutton" href="' . $link . '"' . $target . '>' . $button . '</a>';
+	$output_link .= '</div>';
+}
+
+echo '<div id="' . $instanceID . '" class="' . $instanceID . ' sc-action">';
+	echo '<div class="sc-action-core">';
+	echo '<div class="action-message">';
+		echo '<div class="action-text">';
+		echo $title;
+		echo '</div>';
+		echo '<div class="action-teaser">';
+		echo $teaser;
+		echo '</div>';
+	echo '</div>';
+	echo $output_link;
+	echo '<div class="clearboth"></div>';
+	echo '</div>';
+echo '</div>';
+
+
+//====================================================================
+// Output custom styling if set
+//====================================================================
+
+if ( $color_custom == 'on' and ( 
+	! empty( $color_title ) or 
+	! empty( $color_teaser ) or 
+	! empty( $color_button_text ) or 
+	! empty( $color_button_text_hover ) or 
+	! empty( $color_button_bg ) or 
+	! empty( $color_button_bg_hover ) 
+	) ) {
+
+	echo '<style>';
+
+	// Output title color
+	if ( ! empty( $color_title )  ) {
+		echo '#' . $instanceID . ' .action-text h3 { color: ' . $color_title . '; }';
+	}
+
+	// Output teaser color
+	if ( ! empty( $color_teaser ) ) {
+		echo '#' . $instanceID . ' .action-teaser { color: ' . $color_teaser . '; }';
+	}
+
+	// Output button text color
+	if ( ! empty( $color_button_text ) ) {
+		echo '#' . $instanceID . ' .action-link a { color: ' . $color_button_text . '; }';
+	}
+
+	// Output button text color - Hover
+	if ( ! empty( $color_button_text_hover ) ) {
+		echo '#' . $instanceID . ' .action-link a:hover { color: ' . $color_button_text_hover . '; }';
+	}
+
+	// Output background color
+	if ( ! empty( $color_button_bg ) ) {
+		echo '#' . $instanceID . ' .action-link a { background: ' . $color_button_bg . '; }';
+	}
+
+	// Output background color - Hover
+	if ( ! empty( $color_button_bg_hover ) ) {
+		echo '#' . $instanceID . ' .action-link a:hover { background: ' . $color_button_bg_hover . '; }';
+	}
+
+	echo '</style>';
+}

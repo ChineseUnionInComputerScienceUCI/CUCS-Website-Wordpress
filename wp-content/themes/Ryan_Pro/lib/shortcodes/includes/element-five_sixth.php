@@ -1,0 +1,1 @@
+<div class="five_sixth"><?php if(isset($content)){ echo $content;} ?></div>

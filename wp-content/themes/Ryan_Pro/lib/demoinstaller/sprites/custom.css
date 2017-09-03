@@ -1,0 +1,19 @@
+/** IOA Framework Backend Stylings Version  :   V2 Design   :   Proactive */
+* html .clearfix { height: 1%; }
+
+/* Hides from IE-mac \*/
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix { display: inline-block; *zoom: 1; }
+
+.clearfix { display: block; }
+
+.relative { position: relative; }
+
+div.demo-installer { background:#fff; border:1px solid #ddd; margin: 50px 50px 50px 30px; width: 800px; }
+div.demo-installer h2 { padding: 15px; margin: 0 0 15px 0; border-bottom:1px solid #eee; }
+div.demo-installer p { margin: 15px; }
+
+div.demo-installer a.button-install { margin: 15px; padding: 20px; background:#222; color:#fff; display: block; text-align: center; text-decoration: none; }
+
+div.success-mesage { background:#fff; color:#444; text-align: center; padding: 15px; border:1px solid #ddd; margin: 25px; }

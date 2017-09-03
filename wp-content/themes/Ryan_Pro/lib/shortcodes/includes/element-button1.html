@@ -1,0 +1,95 @@
+<?php 
+$link             = NULL;
+$width            = NULL;
+$size             = NULL;
+$icon             = NULL;
+$animate          = NULL;
+$delay            = NULL;
+$color            = NULL;
+$color_custom     = NULL;
+$color_text       = NULL;
+$color_text_hover = NULL;
+$color_bg         = NULL;
+$color_bg_hover   = NULL;
+$border_radius    = NULL;
+
+$link             = $atts['link'];
+$width            = $atts['width'];
+$size             = $atts['size'];
+$icon             = $atts['icon'];
+$animate          = $atts['animate'];
+$delay            = $atts['delay'];
+$color            = $atts['color'];
+$color_custom     = $atts['color_custom'];
+$color_text       = $atts['color_text'];
+$color_text_hover = $atts['color_text_hover'];
+$color_bg         = $atts['color_bg'];
+$color_bg_hover   = $atts['color_bg_hover'];
+$border_radius    = $atts['border_radius'];
+	
+$animate_start    = NULL;
+$animate_end      = NULL;
+
+if ( empty( $link ) ) { 
+	$link = '#';
+}
+if ( empty( $color ) or $color == 'default' ) { 
+	$color = 'themebutton';
+}
+if ( empty( $size ) ) { 
+	$size = 'medium';
+}
+if ( !empty( $icon )  ) {
+	$icon = '<i class="fa fa-' . $icon . '"></i>';
+}
+
+// Assign animation variables if set
+if ( ! empty( $animate ) and $animate !== 'none' ) {
+	$animate_start = '<div class="animated start-' . $animate . '" title="' . $delay . '">';
+	$animate_end   = '</div><div class="clearboth"></div>';
+}
+
+echo $animate_start;
+echo '<a href="' . $link . '" id="' . $instanceID . '" class="button style1 ' . $color . ' ' . $size . ' ' . $width . '">' . $content . $icon . '</a>';
+echo $animate_end;
+
+//====================================================================
+// Output custom styling if set
+//====================================================================
+
+if ( $color_custom == 'on' and ( ! empty( $color_text ) or ! empty( $color_text_hover ) or ! empty( $color_bg ) or ! empty( $color_bg_hover ) or ! empty( $border_radius ) ) ) {
+	echo '<style>';
+
+	// Output text color
+	if ( ! empty( $color_text )  ) {
+		echo '#' . $instanceID . ' { color: ' . $color_text . '; }';
+	}
+
+	// Output text color - Hover
+	if ( ! empty( $color_text_hover ) ) {
+		echo '#' . $instanceID . ':hover { color: ' . $color_text_hover . '; }';
+	}
+
+	// Output background color
+	if ( ! empty( $color_bg ) ) {
+		echo '#' . $instanceID . ' { background: ' . $color_bg . '; }';
+	}
+
+	// Output background color - Hover
+	if ( ! empty( $color_bg_hover ) ) {
+		echo '#' . $instanceID . ':hover { background: ' . $color_bg_hover . '; }';
+	}
+
+	// Output border radius
+	if ( ! empty( $border_radius ) ) {
+		echo '#' . $instanceID . ' {';
+			echo '-webkit-border-radius: ' . $border_radius . 'px;';
+			echo '-moz-border-radius: ' . $border_radius . 'px;';
+			echo '-ms-border-radius: ' . $border_radius . 'px;';
+			echo '-o-border-radius: ' . $border_radius . 'px;';
+			echo 'border-radius: ' . $border_radius .'px;';
+		echo '}';
+	}
+
+	echo '</style>';
+}

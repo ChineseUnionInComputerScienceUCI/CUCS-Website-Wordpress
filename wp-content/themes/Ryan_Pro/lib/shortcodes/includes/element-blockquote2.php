@@ -1,0 +1,1 @@
+<blockquote class="style2"><?php if(isset($content)){ echo $content;} ?></blockquote>

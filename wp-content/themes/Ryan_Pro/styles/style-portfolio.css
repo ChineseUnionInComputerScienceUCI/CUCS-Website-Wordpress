@@ -1,0 +1,300 @@
+/* Start: Recommended Quicksand styles */
+
+/*---------------------------------------------------- */
+/* Quicksand styles */
+/*---------------------------------------------------- */
+
+.element img {
+	height: auto;
+}
+
+
+/*---------------------------------------------------- */
+/* Filter styles  */
+/*---------------------------------------------------- */
+
+#portfolio-options {
+	position: relative;
+	float: none;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 10px 10px 60px;
+}
+#filter.portfolio-filter {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 -1px 0;
+}
+#filter.portfolio-filter li {
+	display: inline-block;
+}
+#filter.portfolio-filter li a {
+	display: block;
+	text-align: left;
+	color: inherit;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#filter.portfolio-filter li a:before {
+    content: "/";
+	padding: 0 10px;
+}
+#filter.portfolio-filter li:first-child a:before {
+    content: "";
+	padding: 0;
+}
+#filter.portfolio-filter li a,
+#filter.portfolio-filter li a:before {
+	color: #aaa;
+}
+#filter.portfolio-filter li a:hover,
+#filter.portfolio-filter li a.selected {
+	color: #121212;
+}
+#filter.portfolio-filter li a:hover:before,
+#filter.portfolio-filter li a.selected:before {
+}
+.portfolio-wrapper {
+	position: relative;
+	height: auto !important;
+}
+.portfolio-wrapper #container-inner {
+	max-width: 100%;
+	position: relative !important;
+}
+.portfolio-wrapper #container-inner .element > ul {
+	height: auto !important;
+}
+
+/* Portfolio Style 1 - Specific */
+
+/* Portfolio Style 2 - Specific */
+#portfolio-options.style2 #filter.portfolio-filter li a {
+	color: #AAA;
+	background: #fff;
+	border: 2px solid #ddd;
+	padding: 2px 15px;
+	margin: 0 10px 5px 0;
+}
+#portfolio-options.style2 #filter.portfolio-filter li a:before {
+	display: none;
+}
+#portfolio-options.style2 #filter.portfolio-filter li a:hover,
+#portfolio-options.style2 #filter.portfolio-filter li a.selected {
+	color: #121212;
+	border-color: #121212;
+}
+
+/*---------------------------------------------------- */
+/* Hover styles  */
+/*---------------------------------------------------- */
+
+/* Set full width image for 1 column layout */
+.column-1 .port-thumb img {
+	width: 100%;
+}
+
+/* Portolio Hover */
+.port-thumb,
+.port-thumb li,
+.port-thumb li  > a img,
+.port-thumb img {
+	display: block;
+	position: relative;
+}
+.port-thumb li {
+	padding: 0;
+}
+.port-thumb li article {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+.port-thumb li article::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/* Initial state classes: */
+.port-thumb {
+	text-align:center;
+	margin: 0;
+	padding: 0;
+}
+.port-thumb > li > a,
+.port-thumb iframe {
+	display: block;
+}
+.port-thumb .entry-content {
+	width:100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.port-thumb .entry-content a ,
+.port-thumb .entry-content a:hover {
+	color: white;
+}
+.port-thumb .entry-content em {
+	display:block;
+	color:#fff;
+	margin-bottom:10px;
+}
+.port-thumb .entry-content img {
+	display:inline-block;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px
+	border-radius: 0px;
+}
+
+
+/*---------------------------------------------------- */
+/* Hover effect  */
+/*---------------------------------------------------- */
+
+/* Image and article effect */
+.port-thumb:hover .image-overlay.style2 .hover-link,
+.port-thumb:hover .image-overlay.style2 .hover-zoom,
+.port-thumb:hover .hover-link,
+.port-thumb:hover .hover-zoom {
+	-webkit-transform: translate(0);
+	-moz-transform: translate(0);
+	-ms-transform: translate(0);
+	-o-transform: translate(0);
+	transform: translate(0)
+}
+
+/* Title effect */
+.port-details {
+	padding: 15px 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.port-details p,
+.port-title,
+.port-tags {
+	margin: 0;
+}
+.port-details .more-link {
+	margin: 35px 0 0;
+}
+.port-details .more-link a {
+	padding: 8px 15px
+}
+.port-title {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.port-title a {
+	color: inherit;
+}
+.port-title a:hover {
+	color: #AAA;
+}
+.port-tags {
+	margin-top: 5px !important;
+}
+
+/* Portfolio Item */
+.sc-postitem .port-title {
+	font-size: 36px;
+}
+.image_grid.column-3 .sc-postitem .port-title {
+	font-size: 24px;
+}
+.image_grid.column-4 .sc-postitem .port-title {
+	font-size: 20px;
+}
+
+/* Portfolio Style 1 & Style 2 - Specific */
+.portfolio-style1 .sc-postitem,
+.portfolio-style2 .sc-postitem {
+	display: block;
+	margin-bottom: 0;
+}
+
+/* Portfolio Style 1 - Specific */
+.portfolio-style1 #content {
+}
+.sc-carousel.carousel-portfolio.style1 .port-thumb,
+.sc-carousel.carousel-portfolio.style1 .port-details {
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.sc-carousel.carousel-portfolio.style1 .port-thumb {
+	border-bottom: none;
+}
+.sc-carousel.carousel-portfolio.style1 .port-details {
+	border-top: none;
+	margin-top: -8px;
+}
+
+/* Portfolio Style 2 - Specific */
+.sc-carousel.carousel-portfolio.style2 {
+	color: #DADADA;
+}
+.sc-carousel.carousel-portfolio.sc-postitem.style2 .port-title {
+	font-size: 25px;
+}
+
+/*---------------------------------------------------- */
+/* Portfolio Slider & Featured Projects  */
+/*---------------------------------------------------- */
+
+#port-slider {
+	padding: 5px 10px;
+}
+#port-slider a.rslides_nav:hover {
+}
+
+#port-featured {
+	padding: 0 10px;
+}
+#port-featured img {
+	display: block;
+}
+#port-featured .port-title {
+	color: #FFF;
+	padding-top: 40px;
+}
+#port-featured .sc-carousel {
+	padding: 0;
+}
+#port-featured .sc-carousel li {
+	padding: 0 25px 0 0;
+}
+#port-featured .sc-carousel a.prev,
+#port-featured .sc-carousel a.next {
+	top: -25px;
+}
+#port-featured .sc-carousel a.next {
+	right: 25px;
+}
+#port-featured .sc-carousel a.prev {
+	left: auto;
+	right: 65px;
+}
+
+/* Excerpt effect */
+
+
+/* Link & lightbox image effect */

@@ -1,0 +1,1 @@
+<div class="one_fourth"><?php if(isset($content)){ echo $content;} ?></div>

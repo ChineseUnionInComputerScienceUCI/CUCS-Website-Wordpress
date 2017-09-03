@@ -1,0 +1,1 @@
+<div class="two_third"><?php if(isset($content)){ echo $content;} ?></div>

@@ -1,0 +1,1195 @@
+/*
+Theme Name: Ryan Pro
+*/
+
+/*  TABLE OF CONTENTS
+01. THEME SPECIFIC
+02. PORTFOLIO
+03. RESPONSIVE
+04. WOOCOMMERCE
+05. WOOCOMMERCE-THEME
+*/
+
+
+/* ---------------------------------------------------------------------------------------
+	00. IMPORT
+--------------------------------------------------------------------------------------- */
+
+/* Shortcodes rtl stylesheet */
+@import url('styles/rtl/style-shortcodes-rtl.css');
+
+
+/* ---------------------------------------------------------------------------------------
+	01. THEME SPECIFIC
+--------------------------------------------------------------------------------------- */
+
+/* =RESET
+--------------------------------------------------------------------------------------- */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+.panel-grid-cell {
+	padding: 0 0 20px 2.6%
+}
+.panel-grid .panel-grid-cell:last-child {
+	padding-left: 0 !important;
+	padding-right: inherit !important;
+}
+blockquote, q {
+	padding: 0px 15px 0px 25px;
+	margin: 0 15px 20px 0;
+}
+
+/* =GLOBAL
+--------------------------------------------------------------------------------------- */
+
+/* Text elements */
+ul, ol {
+	margin: 0 20px 20px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+/* Alignment */
+.alignleft {
+	float: right;
+}
+.alignright {
+	float: left;
+}
+
+/* =NAVIGATION
+--------------------------------------------------------------------------------------- */
+.nav-previous {
+	float: right;
+}
+.nav-next {
+	float: left;
+}
+
+/* =Pagination
+----------------------------------------------------------------------------- */
+.pag li {
+	margin-left: 1px;
+	margin-right: 0;
+}
+.pag li a,
+.pag li span {
+	margin-left: 2px;
+	margin-right: 0;
+}
+
+/* =Main
+----------------------------------------------------------------------------- */
+#logo,
+#logo-sticky {
+	float: right;
+}
+
+/* =Menu
+----------------------------------------------------------------------------- */
+
+/* Pre-header */
+#pre-header .header-links > ul > li > a {
+	border-left: none;
+	border-right: 1px solid #232323;
+}
+#pre-header .header-links > ul > li:last-child > a {
+	border-left: 1px solid #232323;
+	border-right: none;
+}
+#pre-header li {
+	float: right;
+}
+#pre-header .header-links > ul > li.menu-parent > a:after {
+	float: left;
+	padding-left: 0;
+	padding-right: 6px;
+}
+#pre-header .header-links .sub-menu a {
+	padding: 5px 15px 5px 25px;
+}
+
+/* Pre-header - Alignment */
+#pre-header li.alignright {
+	float: left;
+}
+
+/* Pre-header - Icon Styling */
+#pre-header .header-links i {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Pre-header - Social Media*/
+#pre-header-social {
+	float: left;
+	padding-left: 0;
+	padding-right: 40px;
+}
+#pre-header-social ul {
+	float: left;
+}
+#pre-header-social li.message {
+	padding-left: 10px;
+	padding-right: 0;
+}
+#pre-header-social li a {
+	border-left: none;
+	border-right: 1px solid #333;
+}
+#pre-header-social li:last-child > a {
+	border-left: 1px solid #333;
+	border-right: none;
+}
+
+/* Pre Header - Search */
+#pre-header-search {
+	float: left;
+	padding-left: 0;
+	padding-right: 40px;
+}
+#pre-header-search .search {
+	padding: 10px 15px 10px 40px;
+}
+#pre-header-search .fa-search {
+	left: 0;
+	right: auto;
+}
+
+/* Pre Header - Style 2 */
+.pre-header-style2 #pre-header .header-links > ul > li > a {
+	border-left: none;
+	border-right: 1px solid #E9E9E9;
+}
+.pre-header-style2 #pre-header .header-links > ul > li:last-child > a {
+	border-left: 1px solid #E9E9E9;
+}
+.pre-header-style2 #pre-header-social li a {
+	border-left: none;
+	border-right: 1px solid #E9E9E9;
+}
+.pre-header-style2 #pre-header-social li:last-child > a {
+	border-left: 1px solid #E9E9E9;
+}
+
+/* Header (including #header-sticky */
+#header-links,
+#header-sticky-links {
+	float: left;
+}
+#header-links-inner,
+#header-sticky-links-inner {
+	float: left;
+}
+#header .header-links li,
+#header-sticky .header-links li {
+	float: right;
+}
+#header .header-links > ul > li.menu-parent > a:after,
+#header-sticky .header-links > ul > li.menu-parent > a:after {
+	float: left;
+	padding-left: 0;
+	padding-right: 6px;
+}
+#header .header-links .sub-menu,
+#header-sticky .header-links .sub-menu {
+	float: right;
+}
+.main-navigation ul {
+	padding-right: 0;
+}
+.main-navigation .sub-menu .sub-menu {
+	left: auto;
+	right: 100%;
+}
+
+/* Header - Mega Menu */
+#header .header-links .header-thinkupmega > ul,
+#header-sticky .header-links .header-thinkupmega > ul {
+	left: auto;
+	right: 0;
+}
+#header .header-links .header-thinkupmega > ul > li,
+#header-sticky .header-links .header-thinkupmega > ul > li {
+	float: right;
+}
+#header .header-links .header-thinkupmega ul .sub-menu,
+#header-sticky .header-links .header-thinkupmega ul .sub-menu {
+	left: auto;
+	right: 0;
+}
+#header .header-links .header-thinkupmega ul .sub-menu a:before,
+#header-sticky .header-links .header-thinkupmega ul .sub-menu a:before {
+	content: "\f104";
+	float: right;
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Header - Style 2 (Including pre-header & social icons styling & search) */
+.header-style2 #header .header-links > ul > li > a {
+	border-left: none;
+	border-right: 1px solid #333;
+}
+.header-style2 #header .header-links > ul > li:last-child > a,
+.header-style2 #header-sticky .header-links > ul > li:last-child > a {
+	border-left: 1px solid #333;
+	border-right: none;
+}
+
+/* Header - Style 2 (Position social media icons alongside logo) */
+.header-style2 #header-container #logo {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+/* Header - Social Media*/
+#header-social {
+	padding-left: 0;
+	padding-right: 40px;
+}
+#header-social ul {
+	float: left;
+}
+#header-social li.message {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Header - Search */
+#header-search {
+	padding-left: 0;
+	padding-right: 10px;
+}
+#header-search .search {
+	padding: 5px 15px 5px 40px;
+}
+#header-search .fa-search {
+	left: 0;
+	right: auto;
+	border-left: none;
+	border-right: 1px solid #e9e9e9;
+}
+
+/* Header - Search  - Header Style 2 */
+.header-style2 #header #header-search {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.header-style2 #header #header-search .fa-search {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Arrows of menu parents (uses FontAwesome css) */
+#pre-header .sub-menu .menu-parent > a:before {
+	content: "\f104";
+	text-align: left;
+	left: auto;
+	right: 10px;
+	float: left;
+}
+#pre-header .sub-menu .menu-parent > a:hover:before {
+	left: auto;
+	right: 15px;
+}
+#header .sub-menu .menu-parent > a:before,
+#header-sticky .sub-menu .menu-parent > a:before {
+	content: "\f104";
+	text-align: left;
+	left: auto;
+	right: 10px;
+	float: left;
+}
+#header .sub-menu .menu-parent > a:hover:before,
+#header-sticky .sub-menu .menu-parent > a:hover:before {
+	left: auto;
+	right: 15px;
+}
+
+/* =Slider
+----------------------------------------------------------------------------- */
+
+/* Responsive ThinkUpSlider - Content */
+#slider .featured-excerpt i,
+.thinkupslider-sc .featured-excerpt i {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+/* Slider - Video Slider - YouTube / Vimeo */
+#slider.style2 .featured.one_half,
+.thinkupslider-sc.style2 .featured.one_half {
+	padding-left: 0;
+	padding-right: 40px;
+}
+#slider.style3 .featured.one_half,
+.thinkupslider-sc.style3 .featured.one_half {
+	padding-left: 40px;
+	padding-right: 0;
+}
+
+/* Slider - Alignment */
+#slider .rslides-content.slider-left .featured-title,
+#slider .rslides-content.slider-left .featured-excerpt,
+#slider .rslides-content.slider-left .featured-link,
+.thinkupslider-sc .rslides-content.slider-left .featured-title,
+.thinkupslider-sc .rslides-content.slider-left .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-left .featured-link {
+	text-align: right;
+}
+#slider .rslides-content.slider-left .featured-title span:after,
+.thinkupslider-sc .rslides-content.slider-left .featured-title span:after {
+	left: auto;
+	right: 0;
+}
+#slider .rslides-content.slider-right .featured-title,
+#slider .rslides-content.slider-right .featured-excerpt,
+#slider .rslides-content.slider-right .featured-link,
+.thinkupslider-sc .rslides-content.slider-right .featured-title,
+.thinkupslider-sc .rslides-content.slider-right .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-right .featured-link {
+	text-align: left;
+}
+#slider .rslides-content.slider-right .featured-title span:after,
+.thinkupslider-sc .rslides-content.slider-right .featured-title span:after {
+	left: 0;
+	right: auto;
+}
+
+#slider .rslides-content.slider-middle .featured-title,
+#slider .rslides-content.slider-middle .featured-excerpt,
+#slider .rslides-content.slider-middle .featured-link,
+.thinkupslider-sc .rslides-content.slider-middle .featured-title,
+.thinkupslider-sc .rslides-content.slider-middle .featured-excerpt,
+.thinkupslider-sc .rslides-content.slider-middle .featured-link {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+/* Slider - Style 8 (Title - Black Background - White Font, Excerpt - Dark Color ) */
+#slider .rslides-content.style8 .featured-excerpt span i,
+.thinkupslider-sc .rslides-content.style8 .featured-excerpt span i {
+	margin: 20px 0 0px 15px;
+}
+
+/* =Intro Options
+----------------------------------------------------------------------------- */
+
+/* Breadcrumbs */
+#intro #breadcrumbs .delimiter {
+    padding: 0px 7px;
+}
+#intro #breadcrumbs-home {
+	padding-left: 0;
+	padding-right: 12px;
+}
+#intro #breadcrumbs-home:after {
+	padding-left: 0;
+	padding-right: 12px;
+}
+#intro #breadcrumbs-core a,
+#intro #breadcrumbs-core span {
+	float: left;
+}
+
+/* Align title and breadcumb table cells */
+#intro.option2 .page-title {
+	text-align: right;
+}
+#intro.option2 #breadcrumbs {
+	text-align: left;
+}
+
+/* =MAIN CONTENT
+--------------------------------------------------------------------------------------- */
+
+/* =Image Overlays
+----------------------------------------------------------------------------- */
+
+/* Image Overlay */
+.image-overlay {
+	left: auto;
+	right: 0;
+}
+.image-overlay .image-overlay-inner .hover-zoom {
+	-webkit-transform: translateX(35px);
+	-moz-transform: translateX(35px);
+	-ms-transform: translateX(35px);
+	-o-transform: translateX(35px);
+	transform: translateX(35px);
+}
+.image-overlay .image-overlay-inner .hover-link {
+	-webkit-transform: translateX(-35px);
+	-moz-transform: translateX(-35px);
+	-ms-transform: translateX(-35px);
+	-o-transform: translateX(-35px);
+	transform: translateX(-35px);
+}
+.image-overlay .image-overlay-inner:hover .hover-zoom,
+.image-overlay .image-overlay-inner:hover .hover-link {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0)
+}
+
+/* Image Overlay - Links */
+.image-overlay .hover-zoom:before,
+.image-overlay .hover-link:before {
+	float: left !important;
+	left: auto !important;
+	right: 0 !important
+}
+
+/* =FOOTER
+--------------------------------------------------------------------------------------- */
+
+/* Sub Footer */
+#footer-menu {
+	text-align: left;
+}
+
+/* Sub Footer - Close */
+#sub-footer-close-core {
+	left: 0;
+	right: auto;
+}
+
+/* Post-footer - Social Media */
+#post-footer-social ul {
+	float: left;
+}
+#post-footer-social li a {
+	margin-left: 0;
+	margin-right: 2px;
+}
+
+/* Post-footer - Scroll To Top */
+#scrollUp {
+	left: 20px;
+	right: auto;
+}
+
+/* =WIDGETS & SIDEBAR
+--------------------------------------------------------------------------------------- */
+
+/* =Widgets
+--------------------------------------------------------------------------------------- */
+
+/* Default Widgets */
+.widget ul.children li a,
+.widget ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 14px;
+}
+.widget ul.children ul.children li a,
+.widget ul.sub-menu ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+/* Default Widgets - Footer Area */
+#footer .widget ul.children li a,
+#footer .widget ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 15px;
+}
+#footer .widget ul.children ul.children li a,
+#footer .widget ul.sub-menu ul.sub-menu li a { 
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+/* Widget Specific - Archives */
+.widget.widget_archive li > a:before,
+.widget.widget_categories li > a:before,
+.widget.widget_pages li > a:before,
+.widget.widget_meta li > a:before,
+.widget.widget_nav_menu li > a:before {
+	margin-left: 8px;
+	margin-right: 0;
+}
+
+/* Default Widget - Tag Cloud */
+#footer .widget_tag_cloud a {
+	margin: 0 0 4px 1px;
+}
+
+/* Default Widget - Search */
+.widget_search .search {
+	float: right;
+}
+
+.thinkup_widget_categories li span.cat-name:before {
+	margin-left: 8px;
+	margin-right: 0;
+}
+.thinkup_widget_categories li span.cat-count {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+/* Custom Widget - Child Menu */
+.thinkup_widget_childmenu li > a:before {
+	float: left;
+}
+	
+/* Custom Widget - Contact Form */
+.wpcf7-form .wpcf7-not-valid-tip {
+	left: auto;
+	right: 0;
+}
+
+/* Custom Widget - Flickr */
+.thinkup_widget_flickr .flickr-photo {
+	float: right;
+	margin-left: 2px;
+	margin-right: 0;
+}
+
+/* Custom Widget - Popular Posts / Recent Comments / Recent Posts */
+.popular-posts .image,
+.recent-comments .image,
+.recent-posts .image {
+	float: right;
+}
+.popular-posts .main,
+.recent-comments .main,
+.recent-posts .main {
+	margin-left: 0;
+	margin-right: 100px;
+}
+.popular-posts .main.widget-noimage,
+.recent-comments .main.widget-noimage,
+.recent-posts .main.widget-noimage {
+	margin-right: 0;
+}
+.popular-posts a.title:after,
+.recent-comments a.title:after,
+.recent-posts a.title:after {
+	left: auto;
+	right: 0;
+}
+
+/* Custom Widget - Recent Comments Quotes */
+.thinkup_widget_recentcomments .quote {
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+/* Custom Widget - Search Form */
+.thinkup_widget_search .search {
+	float: right;
+}
+
+/* Custom Widget - Tags Cloud */
+#sidebar .thinkup_widget_tagscloud a {
+	margin: 0 0 4px 4px;
+}
+#footer .thinkup_widget_tagscloud a {
+	margin: 0 0 4px 4px;
+}
+
+/* Custom Widget - Twitter Feed */
+.thinkup_widget_twitterfeed .tweet-content {
+	padding: 10px 45px 0 10px;
+}
+#sidebar .thinkup_widget_twitterfeed .tweet-content {
+	background-position: right 2px top 5px;
+}
+#footer .thinkup_widget_twitterfeed .tweet-content {
+	background-position: right -8px top -5px;
+	padding: 0 35px 0 0;
+}
+#sub-footer .thinkup_widget_twitterfeed {
+	padding-left: 15px;
+	padding-right: 0;
+}
+#sub-footer .thinkup_widget_twitterfeed .tweet-content {
+	background-position: left -5px;
+	padding: 0 0 0 55px;
+}
+
+/* =PAGE FORMATS
+--------------------------------------------------------------------------------------- */
+
+/* =Meta Content
+----------------------------------------------------------------------------- */
+.entry-meta > span {
+	margin: 0 0 5px 5px;
+}
+
+/* =Blog - Style 1
+--------------------------------------------------------------------------------------- */
+.blog-icon i {
+	float: right;
+}
+
+/* =Blog - Style 1 & Style 2
+--------------------------------------------------------------------------------------- */
+.blog-article .blog-icon {
+	left: auto;
+	right: 0;
+}
+.blog-article .entry-meta > span {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.blog-article .entry-meta:after {
+	left: auto;
+	right: 0;
+}
+
+/* Icons for blog meta */
+.blog-article .entry-meta > span.date:before,
+.blog-article .entry-meta > span.author:before,
+.blog-article .entry-meta > span.comment:before,
+.blog-article .entry-meta > span.category:before,
+.blog-article .entry-meta > span.tags:before {
+	padding-left: 6px;
+	padding-right: 0;
+}
+
+/* =Single Post
+--------------------------------------------------------------------------------------- */
+
+/* Meta content */
+.single .entry-meta > span {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.single .entry-meta:after {
+	left: auto;
+	right: 0;
+}
+
+/* Icons for single meta */
+.single .entry-meta > span.date:before,
+.single .entry-meta > span.author:before,
+.single .entry-meta > span.comment:before,
+.single .entry-meta > span.category:before,
+.single .entry-meta > span.tags:before {
+	padding-left: 6px;
+	padding-right: 0;
+}
+
+/* Post - Share */
+#sharemessage p {
+	margin: 0 0 0 15px;
+}
+#shareicons {
+	text-align: left;
+}
+#shareicons a {
+	margin-left: 15px;
+	margin-right: 0;
+}
+
+/* Author Bio */
+#author-image {
+	float: right;
+}
+#author-content {
+	margin-left: 0;
+	margin-right: 200px;
+}
+#author-title p:after {
+	left: auto;
+	right: 0;
+}
+#author-bio img {
+	margin-left: 30px;
+	margin-right: 0;
+}
+
+/* Comments input and textarea placeholder text color */
+#reply-title #cancel-comment-reply-link {
+	margin-left: 0;
+	margin-right: 20px;
+}
+.commentlist article header,
+.commentlist article footer {
+	margin: 0 110px 0 0;
+}
+.commentlist article header .comment-meta:after {
+	left: auto;
+	right: 0;
+}
+.commentlist article header .reply {
+	left: 0;
+	right: auto;
+}
+.commentlist article header .reply a:before {
+	float: right;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.commentlist .children {
+	margin: 0 100px 0 0;
+}
+.commentlist .avatar {
+	float: right;
+}
+.comment-meta,
+.comment .reply {
+	margin-left: 0px;
+}
+
+/* =Contact Us
+--------------------------------------------------------------------------------------- */
+.page-template-template-contact-php #main .contact-details i {
+	margin: 0 0 5px 12px;
+}
+
+/* =Archive
+--------------------------------------------------------------------------------------- */
+.page-template-template-archive-php ul.archive-pages,
+.page-template-template-archive-php ul.archive-categories,
+.page-template-template-archive-php ul.archive-authors,
+.page-template-template-archive-php ul.archive-monthly,
+.page-template-template-archive-php ul.archive-recent {
+	margin-left: 0;
+	margin-right: 2px;
+}
+.page-template-template-archive-php ul.archive-pages .children li,
+.page-template-template-archive-php ul.archive-categories .children li,
+.page-template-template-archive-php ul.archive-authors .children li,
+.page-template-template-archive-php ul.archive-monthly .children li,
+.page-template-template-archive-php ul.archive-recent .children li {
+	padding-left: 0;
+	padding-right: 25px;
+}
+.page-template-template-archive-php ul.archive-pages li:before,
+.page-template-template-archive-php ul.archive-categories li:before,
+.page-template-template-archive-php ul.archive-authors li:before,
+.page-template-template-archive-php ul.archive-monthly li:before,
+.page-template-template-archive-php ul.archive-recent li:before {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.page-template-template-archive-php ul.archive-pages ul.children,
+.page-template-template-archive-php ul.archive-categories ul.children,
+.page-template-template-archive-php ul.archive-authors ul.children,
+.page-template-template-archive-php ul.archive-monthly ul.children,
+.page-template-template-archive-php ul.archive-recent ul.children {
+	margin: 10px -2px 10px 0px;
+}
+
+/* =Sitemap
+--------------------------------------------------------------------------------------- */
+.page-template-template-sitemap-php ul.sitemap-pages,
+.page-template-template-sitemap-php ul.sitemap-authors,
+.page-template-template-sitemap-php ul.sitemap-archives,
+.page-template-template-sitemap-php ul.sitemap-posts,
+.page-template-template-sitemap-php ul.sitemap-posts ul {
+	margin-left: 0;
+	margin-right: 2px;
+}
+.page-template-template-sitemap-php ul.sitemap-pages .children li,
+.page-template-template-sitemap-php ul.sitemap-authors .children li,
+.page-template-template-sitemap-php ul.sitemap-archives .children li,
+.page-template-template-sitemap-php ul.sitemap-posts .children li,
+.page-template-template-sitemap-php ul.sitemap-posts ul .children li {
+	padding-left: 0;
+	padding-right: 25px;
+}
+.page-template-template-sitemap-php ul.sitemap-pages li:before,
+.page-template-template-sitemap-php ul.sitemap-authors li:before,
+.page-template-template-sitemap-php ul.sitemap-archives li:before,
+.page-template-template-sitemap-php ul.sitemap-posts li:before,
+.page-template-template-sitemap-php ul.sitemap-posts ul li:before {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.page-template-template-sitemap-php ul.sitemap-pages ul.children,
+.page-template-template-sitemap-php ul.sitemap-authors ul.children,
+.page-template-template-sitemap-php ul.sitemap-archives ul.children,
+.page-template-template-sitemap-php ul.sitemap-posts ul.children,
+.page-template-template-sitemap-php ul.sitemap-posts ul ul.children {
+	margin: 10px -2px 10px 0px;
+}
+
+/* =404 Error
+--------------------------------------------------------------------------------------- */
+.title-404 h2 i {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+/* =Portfolio (styling code in style-portfolio.css)
+--------------------------------------------------------------------------------------- */
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5,
+.column-6 {
+	float: right;
+}
+
+/* =Team
+--------------------------------------------------------------------------------------- */
+
+/* Team page members media */
+.team-social li a {
+	margin-left: 2px;
+	margin-right: 0;
+}
+
+/* Align team details in table (name, social, message) */
+.team-content .team-links,
+.team-content .team-email {
+	text-align: left;
+}
+.team-content .team-links ul {
+	margin: 0 auto 0 0;
+}
+
+/* =SHORTCODES - THEME SPECIFIC STYLE
+--------------------------------------------------------------------------------------- */
+
+/* BLOCKQUOTES
+------------------------------------------------------------------ */
+blockquote.style2, q.style2 {
+	border-left: none;
+	border-right: 10px solid #121212;
+}
+
+/* CAROUSEL (NAVIGATION)
+------------------------------------------------------------------ */
+.sc-carousel-title {
+	float: right;
+}
+
+/* LIST - FONT AWESOME
+------------------------------------------------------------------ */
+ul.iconfont i {
+	margin: 0 -22px 0 15px;
+}
+
+/* NOTIFICATION BOXES
+------------------------------------------------------------------ */
+
+/* Add icons to alerts */
+.notification.download,
+.notification.success,
+.notification.error,
+.notification.stop,
+.notification.info,
+.notification.question,
+.notification.warning,
+.notification.message  { 
+	padding-left: 0;
+	padding-right: 50px;
+}
+.notification.download:before,
+.notification.success:before,
+.notification.error:before,
+.notification.stop:before,
+.notification.info:before,
+.notification.question:before,
+.notification.warning:before,
+.notification.message:before {
+	left: auto;
+	right: 0;
+}
+.notification .icon:before {
+	left: auto;
+	right: 50px;
+	border-left-color: inherit; 
+	border-right-color: #121212;
+}
+.notification.download .icon:before, .notification.success .icon:before  {
+	border-left-color: inherit; 
+	border-right-color: #587051;
+}
+.notification.error .icon:before,    .notification.stop .icon:before     { 
+	border-left-color: inherit; 
+	border-right-color: #ce4c48;
+}
+.notification.info .icon:before,     .notification.question .icon:before {
+	border-left-color: inherit; 
+	border-right-color: #5d95c2;
+}
+.notification.warning .icon:before,  .notification.message .icon:before  { 
+	border-left-color: inherit; 
+	border-right-color: #af8637;
+}
+
+/* PRICING TABLE
+------------------------------------------------------------------ */
+.pricing-table i {
+	left: auto;
+	right: -15px;
+}
+.pricing-features {
+	text-align: right;
+}
+
+/* TESTIMONIAL POST CAROUSEL
+------------------------------------------------------------------ */
+
+/* Carousel Testimonial - Style 1 */
+.sc-carousel.carousel-testimonial.style1 .entry-header  {
+	text-align: right;
+}
+.sc-carousel.carousel-testimonial.style1 .entry-header a {
+	left: auto;
+	right: 0;
+}
+.sc-carousel.carousel-testimonial.style1 .entry-content {
+	text-align: right;
+}
+.sc-carousel.carousel-testimonial.style1 .testimonial-thumb {
+	float: right;
+}
+.sc-carousel.carousel-testimonial.style1 .testimonial-thumb .selected:before {
+	left: auto;
+	right: 26px;
+}
+.sc-carousel.carousel-testimonial.style1 .testimonial-excerpt,
+.sc-carousel.carousel-testimonial.style1 .testimonial-position {
+	text-align: right;
+	margin-left: 0;
+	margin-right: 100px;
+}
+
+/* TESTIMONIAL ITEM
+------------------------------------------------------------------ */
+
+/* Testimonial Item - Style 1 */
+.sc-carousel.carousel-testimonial.sc-postitem.style1 .testimonial-thumb:before {
+	left: auto;
+	right: 20px;
+}
+
+/* ICONS (FONT AWESOME)
+------------------------------------------------------------------ */
+
+/* Font Icon - Style 1 & Style 2 & Style 3 & Style 4 */
+.iconfull.style1 .iconimage,
+.iconfull.style2 .iconimage {
+	float: right;
+}
+.iconfull.style1 .iconmain,
+.iconfull.style2 .iconmain {
+	text-align: right;
+}
+
+/* Font Icon - Style 1 */
+.iconfull.style1 {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.iconfull.style1 .iconimage {
+	float: right;
+}
+.iconfull.style1 .iconmain {
+	margin-left: 0;
+	margin-right: 80px;
+}
+.iconfull.style1 .iconimage i:after {
+	left: 60px;
+	right: auto;
+	border-left-color: inherit;
+}
+
+/* Font Icon - Style 2 */
+.iconfull.style2 {
+	padding-left: 10px;
+	padding-right: 0;
+}
+.iconfull.style2 .iconimage {
+	float: left;
+}
+.iconfull.style2 .iconmain {
+	margin-left: 80px;
+	margin-right: 0;
+}
+.iconfull.style2 .iconimage i:after {
+	left: auto;
+	right: 60px;
+	border-right-color: inherit;
+}
+
+/* PROGRESS BARS - ROUND
+------------------------------------------------------------------ */
+.sc-knob.sc-counter > div:after {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+/* =PAGE BUILDER - THEME SPECIFIC STYLE
+--------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------
+	02. PORTFOLIO
+--------------------------------------------------------------------------------------- */
+
+/* Filter styles */
+#filter.portfolio-filter li a {
+	text-align: right;
+}
+#filter.portfolio-filter li a:before {
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+/* Portfolio Style 2 - Specific */
+#portfolio-options.style2 #filter.portfolio-filter li a {
+	margin: 0 0 5px 10px;
+}
+
+/* Portolio Hover */
+.port-thumb li article {
+	left: auto;
+	right: 0;
+}
+
+/* Portfolio Slider & Featured Projects */
+#port-featured .sc-carousel li {
+	padding: 0 0 0 25px;
+}
+#port-featured .sc-carousel a.next {
+	left: 25px;
+	right: auto;
+}
+#port-featured .sc-carousel a.prev {
+	left: 65px;
+	right: auto;
+}
+
+
+/* ---------------------------------------------------------------------------------------
+	03. RESPONSIVE
+--------------------------------------------------------------------------------------- */
+
+/* Desktop / Laptop */
+@media only screen and (max-width: 1140px) {
+	#logo {
+		margin-left: 0;
+		margin-right: 15px;
+	}
+}
+	
+/* iPad & Tablet */
+@media only screen and (max-width: 768px) {
+
+	/* Header */
+	#logo {
+		text-align: right !important;
+	}
+	#logo img,
+	#logo h1 {
+		float: right;
+	}
+}
+
+/* Small Tablets & Larger Phones */
+@media only screen and (max-width: 685px) {
+
+	/* Main */
+	#main-core,
+	#intro.option1, 
+	#intro.option2 {
+		margin-right: 0px !important;
+	}
+	#intro #intro-core {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	#intro.option2 .page-title {
+		text-align: right;
+	}
+
+	/* Intro / Outro */
+	.action-text.three_fourth,
+	.action-button.one_fourth.last {
+		margin-left: 0;
+	}
+
+	/* Widgets */
+	.thinkup_widget_flickr .flickr-photo {
+		margin-left: 5px !important;
+		margin-right: 0 !important;
+	}
+}
+
+/* iPhone (Landscape) */
+@media only screen and (max-width: 568px) {
+	
+	/* Portfolio */
+	#filter.portfolio-filter,
+	#portfolio-options.style2 #filter.portfolio-filter li	{
+		margin-right: 0;
+	}
+
+	/* Single Post */
+	#comments {
+		margin-left: 0;
+	}
+	#nocomments {
+		margin-right: 0;
+	}
+	
+	/* Single Post Share */
+	#author-bio .author-description {
+		padding-left: 50px;
+		padding-right: 0;
+	}
+
+	/* Shortcode Content */
+	.one_half,
+	.one_third,
+	.two_third,
+	.one_fourth,
+	.three_fourth,
+	.one_fifth,
+	.two_fifth,
+	.three_fifth,
+	.four_fifth,
+	.one_sixth,
+	.five_sixth {
+		margin-left: 0;
+	}
+
+	/* Portfolio Navigation */
+
+	/* Widgets */
+	.thinkup_widget_categories li span {
+		padding-left: 0;
+		padding-right: 5px;
+	}
+}
+
+
+/* iPhone (Portrait) */
+@media only screen and (max-width: 320px) {
+
+	/* Single Post Share */
+	.commentlist .children {
+		margin: 0 25px 0 0;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------
+	04. WOOCOMMERCE
+--------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------
+	05. WOOCOMMERCE-THEME
+--------------------------------------------------------------------------------------- */
+

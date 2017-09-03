@@ -1,0 +1,78 @@
+<?php
+$image     = NULL;
+$heading   = NULL;
+$link      = NULL;
+$link_text = NULL;
+$animate   = NULL;
+$delay     = NULL;
+
+$image     = $atts['image'];
+$heading   = $atts['heading'];
+$link      = $atts['link'];
+$link_text = $atts['link_text'];
+$animate   = $atts['animate'];
+$delay     = $atts['delay'];
+
+$class_button = ' themebutton3';
+
+// Assign image and link variables if set
+if ( empty( $link ) ) {
+	if ( ! empty( $image ) ) {
+		$image = '<div class="iconimage"><img src="' . $image . '" alt="' . $heading . '" /></div>';
+	}
+} else {
+	if ( empty( $link_text ) ) {
+		$link_text = 'Learn More';
+	}
+	if ( ! empty( $image ) ) {
+		$image = '<div class="iconimage"><a href="' . $link . '"><img src="' . $image . '" alt="' . $heading . '" /></a></div>';
+	}
+	$link = '<p class="iconurl"><a class="' . $class_button . '" href="' . $link .'">' . $link_text . '</a></p>';
+}
+
+// Assign heading variable
+if ( ! empty( $heading ) ) {
+	$heading = '<h3>' . $heading . '</h3>';
+}
+
+// Assign main content variable
+if ( ! empty( $content ) ) {
+	$content = wpautop( $content );
+}
+
+// Assign animation variables if set
+if ( ! empty( $animate ) and $animate !== 'none' ) {
+	$animate_start = '<div class="animated start-' . $animate . '" title="' . $delay . '">';
+	$animate_end   = '</div><div class="clearboth"></div>';
+}
+		
+// Output services
+echo $animate_start;
+
+	$output .= '<div class="services-builder style2">';
+	$output .= $image;
+	$output .= '<div class="iconmain">' . $heading . $content . $link . '</div>';
+	$output .= '</div>';
+
+	echo $output;
+
+echo $animate_end;
+
+// Load animation styles and scripts
+if ( ! empty( $animate ) and $animate !== 'none' ) {
+			
+	if ( ! wp_script_is( 'animate-js', 'enqueued' ) ) {
+	// Enque styles only if widget is being used
+	wp_enqueue_style( 'animate-css', plugin_dir_url(SITEORIGIN_PANELS_BASE_FILE) . 'inc/plugins/animate.css/animate.css', array(), '1.0' );
+	wp_enqueue_style( 'animate-thinkup-css', plugin_dir_url(SITEORIGIN_PANELS_BASE_FILE) . 'widgets-builder/animation/css/animate-thinkup-panels.css', array(), '1.0' );
+
+	if ( ! wp_script_is( 'waypoints', 'enqueued' ) ) {
+	// Enque waypoints only if widget is being used
+	wp_enqueue_script( 'waypoints', plugin_dir_url(SITEORIGIN_PANELS_BASE_FILE) . 'inc/plugins/waypoints/waypoints.min.js', array( 'jquery' ), '2.0.3', 'true'  );
+	wp_enqueue_script( 'waypoints-sticky', plugin_dir_url(SITEORIGIN_PANELS_BASE_FILE) . 'inc/plugins/waypoints/waypoints-sticky.min.js', array( 'jquery' ), '2.0.3', 'true'  );
+	}
+
+	// Enque scripts only if widget is being used
+	wp_enqueue_script( 'animate-js', plugin_dir_url(SITEORIGIN_PANELS_BASE_FILE) . 'widgets-builder/animation/js/animate-thinkup-panels.js', array( 'jquery' ), '1.1', true );
+	}
+}
