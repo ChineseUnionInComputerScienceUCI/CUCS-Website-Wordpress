@@ -1,0 +1,37 @@
+/*
+ * Created by Anshul Gangrade.
+ */
+ 
+#cbc_metafield{
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+ 
+#cbc_metafield p{
+    clear: both;
+}
+ 
+.cbc-row-title{
+    display: block;
+    float: left;
+    width: 200px;
+}
+ 
+.cbc-row-content{
+    float: left;
+    padding-bottom: 1em;
+}
+ 
+.cbc-row-content label{
+    display: block;
+    line-height: 1.75em;
+}
+
+span.cbc-row-content  label {
+    display: inline;
+    width: 100px;
+    float: left;
+}
+#cbc_metafield p {clear: both;}
+
+#cbc_metafield input[type="text"], #cbc_metafield select{min-width:200px;}
